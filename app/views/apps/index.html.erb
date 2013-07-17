@@ -12,9 +12,9 @@
   <tbody>
     <% @apps.each do |app| %>
       <tr>
-        <td><%= link_to 'Show', app %></td>
-        <td><%= link_to 'Edit', edit_app_path(app) %></td>
-        <td><%= link_to 'Destroy', app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', job_app_path(@job.id, app) %></td>
+        <td><%= link_to 'Edit', edit_job_app_path(@job, app) %></td>
+        <td><%= link_to 'Destroy', job_app_path(@job, app), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +22,4 @@
 
 <br>
 
-<%= link_to 'New App', new_app_path %>
+<%= link_to 'New App', new_job_app_path %>

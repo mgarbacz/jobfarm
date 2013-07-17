@@ -1,4 +1,5 @@
 class AppsController < ApplicationController
+  before_action :set_job
   before_action :set_app, only: [:show, :edit, :update, :destroy]
 
   # GET /apps
@@ -28,7 +29,7 @@ class AppsController < ApplicationController
 
     respond_to do |format|
       if @app.save
-        format.html { redirect_to @app, notice: 'App was successfully created.' }
+        format.html { redirect_to job_apps_path, notice: 'App was successfully created.' }
         format.json { render action: 'show', status: :created, location: @app }
       else
         format.html { render action: 'new' }
@@ -42,7 +43,7 @@ class AppsController < ApplicationController
   def update
     respond_to do |format|
       if @app.update(app_params)
-        format.html { redirect_to @app, notice: 'App was successfully updated.' }
+        format.html { redirect_to job_apps_path, notice: 'App was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -56,7 +57,7 @@ class AppsController < ApplicationController
   def destroy
     @app.destroy
     respond_to do |format|
-      format.html { redirect_to apps_url }
+      format.html { redirect_to job_apps_url }
       format.json { head :no_content }
     end
   end
@@ -65,6 +66,11 @@ class AppsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_app
       @app = App.find(params[:id])
+    end
+
+    # Use callbacks to share common setup or constraints between actions.
+    def set_job
+      @job = Job.find(params[:job_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
