@@ -1,5 +1,7 @@
 Jobfarm::Application.routes.draw do
   
+  resources :apps
+
   resources :jobs
 
   root to: "welcome#index"
