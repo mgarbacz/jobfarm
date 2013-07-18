@@ -2,28 +2,28 @@ class AppsController < ApplicationController
   before_action :set_job
   before_action :set_app, only: [:show, :edit, :update, :destroy]
 
-  # GET /apps
-  # GET /apps.json
+  # GET /jobs/1/apps
+  # GET /jobs/1/apps.json
   def index
     @apps = App.all
   end
 
-  # GET /apps/1
-  # GET /apps/1.json
+  # GET /jobs/1/apps/1
+  # GET /jobs/1/apps/1.json
   def show
   end
 
-  # GET /apps/new
+  # GET /jobs/1/apps/new
   def new
     @app = App.new
   end
 
-  # GET /apps/1/edit
+  # GET /jobs/1/apps/1/edit
   def edit
   end
 
-  # POST /apps
-  # POST /apps.json
+  # POST /jobs/1/apps
+  # POST /jobs/1/apps.json
   def create
     @app = App.new(app_params)
 
@@ -38,8 +38,8 @@ class AppsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /apps/1
-  # PATCH/PUT /apps/1.json
+  # PATCH/PUT /jobs/1/apps/1
+  # PATCH/PUT /jobs/1/apps/1.json
   def update
     respond_to do |format|
       if @app.update(app_params)
@@ -52,8 +52,8 @@ class AppsController < ApplicationController
     end
   end
 
-  # DELETE /apps/1
-  # DELETE /apps/1.json
+  # DELETE /jobs/1/apps/1
+  # DELETE /jobs/1/apps/1.json
   def destroy
     @app.destroy
     respond_to do |format|
