@@ -1,0 +1,25 @@
+<h1>Listing users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Sign In Count</th>
+      <th>Last Sign In At</th>
+      <th>Last Sign In IP</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= user.sign_in_count %></td>
+        <td><%= user.last_sign_in_at %></td>
+        <td><%= user.last_sign_in_ip %></td>
+        <td><%= link_to 'Show', user %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Sign In Count:</strong>
+  <%= @user.sign_in_count %>
+</p>
+
+<p>
+  <strong>Last Signed In At:</strong>
+  <%= @user.last_sign_in_at %>
+</p>
+
+<p>
+  <strong>Last Signed In IP:</strong>
+  <%= @user.last_sign_in_at %>
+</p>
+
+<%= link_to 'Back', users_path %>
