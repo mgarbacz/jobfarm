@@ -1,4 +1,4 @@
-<h1>Job Listings</h1>
+<h1 id="job_listing_intro">Job Listings</h1>
 
 <div class="row">
   <div class="span8">
@@ -46,7 +46,7 @@
             <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
             <% if user_signed_in? %>
               <button class="btn btn-success">Save for later</button>
-              <button class="btn btn-primary">Apply</button>
+              <%= button_to "Apply", [job, @app], remote: true, :class => 'btn btn-primary' %>
             <% else %>
               <span>
                 <%= link_to 'Sign up', new_user_registration_path %>
