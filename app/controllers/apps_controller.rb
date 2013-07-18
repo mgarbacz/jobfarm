@@ -1,6 +1,7 @@
 class AppsController < ApplicationController
-  before_action :set_job
+  before_filter :authenticate_user!, except: [:index, :show]
   before_action :set_app, only: [:show, :edit, :update, :destroy]
+  before_action :set_job
 
   # GET /jobs/1/apps
   # GET /jobs/1/apps.json
@@ -26,6 +27,7 @@ class AppsController < ApplicationController
   # POST /jobs/1/apps.json
   def create
     @app = App.new(app_params)
+    @app.applicant = current_user
 
     respond_to do |format|
       if @app.save
