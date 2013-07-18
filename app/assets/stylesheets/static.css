@@ -28,10 +28,15 @@ h1, h2, h3, h4 {
 
 .banner {
 	text-align: center;
-	height: 600px;
+	height: 520px;
 }
 #banner_tagline {
   padding: 30px 0;
+}
+.banner p {
+  padding-top: 20px;
+  width: 200px;
+  margin: 0 auto;
 }
 
 .center {
@@ -62,7 +67,6 @@ h1, h2, h3, h4 {
 .sf_green {
 	background-color: #009e49;
 }
-
 
 .text_large {
 	font-size: xx-large;
