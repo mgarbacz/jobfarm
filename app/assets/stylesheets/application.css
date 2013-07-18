@@ -13,3 +13,11 @@
  *= require twitter/bootstrap-responsive
  *= require_tree .
  */
+
+ td, th {
+ 	padding: 10px;
+ }
+
+ td a {
+ 	border: 1px solid black;
+ }
