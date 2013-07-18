@@ -44,8 +44,17 @@
           </div>
           <div class="modal-footer">
             <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-            <button class="btn btn-success">Save for later</button>
-            <button class="btn btn-primary">Apply</button>
+            <% if user_signed_in? %>
+              <button class="btn btn-success">Save for later</button>
+              <button class="btn btn-primary">Apply</button>
+            <% else %>
+              <span>
+                <%= link_to 'Sign up', new_user_registration_path %>
+                or
+                <%= link_to 'Sign in', new_user_session_path%>
+                to Save or Apply for this job.
+              </span>
+            <% end %>
           </div>
         </div>
         <% end %>

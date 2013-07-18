@@ -71,6 +71,7 @@ h1, h2, h3, h4 {
 .form-search .icon-search {
   padding: 0 5px;
 }
+
 .job-row {
   cursor: pointer;
 }
@@ -82,4 +83,8 @@ h1, h2, h3, h4 {
 .job-categories {
   font-size: 14px;
   padding: 2px;
+}
+
+.modal-footer span {
+  padding: 0 5px;
 }
