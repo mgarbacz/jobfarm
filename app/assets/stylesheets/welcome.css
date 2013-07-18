@@ -1,3 +1,7 @@
+.job-row {
+  cursor: pointer;
+}
+
 .job-title, .job-location {
   font-size: 20px;
 }
