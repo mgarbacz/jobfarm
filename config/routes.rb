@@ -1,4 +1,5 @@
 Jobfarm::Application.routes.draw do
+  root to: "static#landing"
   get 'landing', to: 'static#landing'
   get 'profile', to: 'static#profile'
   get 'listings', to: 'static#listings'
@@ -9,7 +10,7 @@ Jobfarm::Application.routes.draw do
     resources :apps
   end
 
-  root to: "static#landing"
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

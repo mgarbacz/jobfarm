@@ -1,0 +1,9 @@
+<% [:notice, :error, :alert].each do |msg_level| %>
+  <% unless flash[msg_level].blank? %>
+    <% msg_class = get_msg_class(msg_level) %>
+    <div class="alert <%= msg_class[:css] %>">
+      <strong><%= msg_class[:note] %></strong>
+      <%= flash[msg_level] %>
+    </div>
+  <% end %>
+<% end %>

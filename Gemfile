@@ -24,6 +24,9 @@ gem 'jquery-rails'
 # Use Twitter Bootstrap
 gem 'less-rails-bootstrap'
 
+# Use devise for user authentication
+gem 'devise'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 

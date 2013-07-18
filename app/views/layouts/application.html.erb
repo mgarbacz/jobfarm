@@ -9,7 +9,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render 'layouts/user_status' %>
   <div class="container">
+    <%= render 'layouts/messages' %>
 
     <%= yield %>
 

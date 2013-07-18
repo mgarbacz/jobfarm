@@ -14,6 +14,10 @@
  *= require_tree .
  */
 
+ #user_nav {
+    float: right;
+ }
+
  td, th {
  	padding: 10px;
  }
