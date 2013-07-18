@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :jobs_applied_for,
+  has_many :apps_for_jobs,
            :class_name => App,
            :foreign_key => :applicant_id
 
