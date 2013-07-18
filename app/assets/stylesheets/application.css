@@ -27,8 +27,12 @@
 
 #user_nav {
   position: absolute;
-  right: 20px;
+  right: 10px;
   top: 10px;
+}
+
+#user_nav a {
+  padding: 0 10px;
 }
 
 td, th {
