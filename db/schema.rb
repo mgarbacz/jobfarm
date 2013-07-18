@@ -11,11 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130718045850) do
+ActiveRecord::Schema.define(version: 20130718092901) do
 
   create_table "apps", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "applicant_id"
   end
 
   create_table "jobs", force: true do |t|
@@ -39,6 +40,8 @@ ActiveRecord::Schema.define(version: 20130718045850) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "phone_number"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
