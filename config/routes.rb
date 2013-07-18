@@ -2,6 +2,9 @@ Jobfarm::Application.routes.draw do
   
   
 
+  get "static/landing"
+  get "static/profile"
+  get "static/listings"
   resources :jobs do
     resources :apps
   end
