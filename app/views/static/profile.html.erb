@@ -3,15 +3,127 @@
 <div class="row">
   <div class="span8">
     <h3>Jobs you have applied for</h3>
-    <% @user.apps_for_jobs.each do |app| %>
-      <p><%= app %></p>
+    <table class="jobs table table-hover">
+      <thead>
+        <tr>
+          <th>Title & Categories</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @user.apps_for_jobs.each do |app| %>
+          <tr class="job-row" data-toggle="modal" 
+              data-target="#job-modal-<%= app.job.id %>">
+          <td class="job-title"><%= app.job.title %>
+            <p class="job-categories"><%= app.job.description %></p>
+          </td>
+          <td class="job-location"><%= app.job.location %></td>
+          </tr>
+          <!-- Modal -->
+          <div id="job-modal-<%= app.job.id %>" class="modal hide fade" 
+               tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+               aria-hidden="true">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel"><%= app.job.title %></h3>
+          </div>
+          <div class="modal-body">
+            <h4>Description</h4>
+            <p>This is a description of the position and the sort of work you would be doing. You would read this but this is Hack Day so we should have just put a Nyan Cat in here because it would be prettier.</p>
+            <h4>Responsibilities</h4>
+            <ul>
+              <li>Be on time.</li>
+              <li>Be late sometimes to keep people on their toes.</li>
+              <li>Support IE6</li>
+              <li>Fluent in Visual Basic</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="btn btn-primary">Contact Recruiter</button>
+        </div>
+      </div>
     <% end %>
-    <h3>Jobs you have saved for later</h3>
+  </tbody>
+</table>
+<h3>Jobs you have saved for later</h3>
+<table class="jobs table table-hover">
+  <thead>
+    <tr>
+      <th>Title & Categories</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="job-row" data-toggle="modal" 
+    data-target="#save-modal-1">
+    <td class="job-title">Superhero - Superman
+      <p class="job-categories">Saving the World, Being Alien</p>
+    </td>
+    <td class="job-location">Must be willing to travel</td>
+  </tr>
+  <!-- Modal -->
+  <div id="job-modal-1" class="modal hide fade" 
+  tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Superhero - Superman</h3>
   </div>
-  <div class="span4">
-    <button>Import LinkedIn</button>
-    <button>Import StackOverflow Careers</button>
+  <div class="modal-body">
+    <h4>Description</h4>
+    <p>This is a description of the position and the sort of work you would be doing. You would read this but this is Hack Day so we should have just put a Nyan Cat in here because it would be prettier.</p>
+    <h4>Responsibilities</h4>
+    <ul>
+      <li>Be on time.</li>
+      <li>Be late sometimes to keep people on their toes.</li>
+      <li>Support IE6</li>
+      <li>Fluent in Visual Basic</li>
+    </ul>
   </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Contact Recruiter</button>
+  </div>
+</div>
+<tr class="job-row" data-toggle="modal" 
+data-target="#save-modal-1">
+<td class="job-title">Internet Star - Tay Zonday
+  <p class="job-categories">Deep Voice, Play Piano</p>
+</td>
+<td class="job-location">Tubes, World Wide Web</td>
+</tr>
+<!-- Modal -->
+<div id="job-modal-1" class="modal hide fade" 
+tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+aria-hidden="true">
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+  <h3 id="myModalLabel">Internet Star - Tay Zonday</h3>
+</div>
+<div class="modal-body">
+  <h4>Description</h4>
+  <p>This is a description of the position and the sort of work you would be doing. You would read this but this is Hack Day so we should have just put a Nyan Cat in here because it would be prettier.</p>
+  <h4>Responsibilities</h4>
+  <ul>
+    <li>Be on time.</li>
+    <li>Be late sometimes to keep people on their toes.</li>
+    <li>Support IE6</li>
+    <li>Fluent in Visual Basic</li>
+  </ul>
+</div>
+<div class="modal-footer">
+  <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  <button class="btn btn-primary">Contact Recruiter</button>
+</div>
+</div>
+</tbody>
+</table>
+</div>
+<div class="span4">
+  <button>Import LinkedIn</button>
+  <button>Import StackOverflow Careers</button>
+</div>
 </div>
 <div class="row">
   <div class="span12">
