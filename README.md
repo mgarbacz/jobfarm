@@ -1,30 +1,11 @@
 jobfarm
 =======
 
-## Navbar for every page - Brand + user_nav
+Navbar has links to home, profile, and listings when logged in
+Navbar has links to home, recruiter, and listings when not logged in
 
-## Landing page
-Name
-Tagline
-3 image description
+'Apply' button works
 
-## Listing
-Header
-Search bar
-Job tabular listing
-Job modal
-Map image
-
-## Profile
-Header
-Import from LinkedIn or SO Careers buttons
-Jobs applied for
-Your details
-
-## Recruiter applications list view
-Header with job info
-Applications tabular listing
-Application modal
 
 
 * Ruby version
