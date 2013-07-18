@@ -52,20 +52,8 @@ h1, h2, h3, h4 {
 	font-size: 200px;
 }
 
-.pad {
-	padding: 20px;
-}
-
-.right {
-	text-align: right;
-}
-
 .sf_blue {
 	background-color: #4994cd;
-}
-
-.sf_green {
-	background-color: #009e49;
 }
 
 .text_large {
@@ -74,4 +62,24 @@ h1, h2, h3, h4 {
 
 .white {
 	color: #fff;
+}
+
+/* LISTINGS PAGE */
+.form-search {
+  padding: 20px 0;
+}
+.form-search .icon-search {
+  padding: 0 5px;
+}
+.job-row {
+  cursor: pointer;
+}
+
+.job-title, .job-location {
+  font-size: 20px;
+}
+
+.job-categories {
+  font-size: 14px;
+  padding: 2px;
 }

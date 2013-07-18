@@ -6,5 +6,6 @@ class StaticController < ApplicationController
   end
 
   def listings
+    @jobs = Job.all
   end
 end
