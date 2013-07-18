@@ -20,7 +20,7 @@
   border: none;
 }
 
-#main_nav .brand, #user_nav a {
+#main_nav .brand, #main_nav a, #user_nav a {
   color: #ffffff;
   text-shadow: none;
 }
