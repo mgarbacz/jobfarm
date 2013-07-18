@@ -1,0 +1,33 @@
+/* Style used for static pages */
+
+
+/* could be used across entire site */
+header {
+	background-color: #4994cd;
+}
+
+
+h1, h2, h3 {
+	font-weight: normal;
+	padding:20px;
+}
+
+.banner {
+	height: 300px;
+	background-color: #0009e49;
+}
+
+.banner.div {
+	font-size: large;
+}
+
+.center {
+	text-align: center;
+}
+.sf_blue {
+	background-color: #4994cd;
+}
+
+.sf_green {
+	background-color: #009e49;
+}
