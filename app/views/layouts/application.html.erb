@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Jobfarm</title>
+  <title>JobFarm | All employees. All opportunities. All the time.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -9,7 +9,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render 'layouts/user_status' %>
+  <div id="main_nav" class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="#">JobFarm</a>
+      <%= render 'layouts/user_status' %>
+    </div>
+  </div>
   <div class="container">
     <%= render 'layouts/messages' %>
 

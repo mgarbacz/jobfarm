@@ -14,8 +14,21 @@
  *= require_tree .
  */
 
+#main_nav, #main_nav .navbar-inner {
+  background-color: #4994cd;
+  background-image: none;
+  border: none;
+}
+
+#main_nav .brand, #user_nav a {
+  color: #fafafa;
+  text-shadow: none;
+}
+
 #user_nav {
-  float: right;
+  position: absolute;
+  right: 20px;
+  top: 10px;
 }
 
 td, th {
