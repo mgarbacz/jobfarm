@@ -5,6 +5,7 @@
     <tr>
       <th>Title</th>
       <th>Description</th>
+      <th>Location</th>
       <th></th>
       <th></th>
       <th></th>
@@ -17,6 +18,7 @@
       <tr>
         <td><%= job.title %></td>
         <td><%= job.description %></td>
+        <td><%= job.location %></td>
         <td><%= link_to 'Apply', new_job_app_path(job) %></td>
         <td><%= link_to 'Show', job %></td>
         <td><%= link_to 'Edit', edit_job_path(job) %></td>
