@@ -1,3 +1,12 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.job-title, .job-location {
+  font-size: 20px;
+}
+
+.job-family {
+  padding: 2px;
+}
+
+i {
+  width: 64px;
+  height: 64px;
+}
