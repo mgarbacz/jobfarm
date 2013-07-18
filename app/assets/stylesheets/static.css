@@ -88,3 +88,12 @@ h1, h2, h3, h4 {
 .modal-footer span {
   padding: 0 5px;
 }
+
+/* PROFILE PAGE */
+#profile_intro {
+  margin-bottom: 30px;
+}
+
+#profile_info {
+  padding: 20px 0;
+}
