@@ -3,6 +3,7 @@ Jobfarm::Application.routes.draw do
   get 'landing', to: 'static#landing'
   get 'profile', to: 'static#profile'
   get 'listings', to: 'static#listings'
+  get 'recruiter', to: 'static#recruiter'
 
   get "welcome/index"
 

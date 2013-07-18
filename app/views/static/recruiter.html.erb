@@ -1,0 +1,90 @@
+<h1>Applications by Job</h1>
+
+<table class="jobs table table-hover">
+  <thead>
+    <tr>
+      <th>Title & Categories</th>
+      <th>Location</th>
+      <th>Applications</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @jobs.each do |job| %>
+    <tr class="job-row" >
+      <td class="job-title" data-toggle="modal" 
+      data-target="#job-modal-<%= job.id %>"><%= job.title %>
+      <p class="job-categories"><%= job.description %></p>
+    </td>
+    <td class="job-location"><%= job.location %></td>
+    <td class="job-applications">
+      <% job.apps.each do |app| %>
+      <button class="btn" data-toggle="modal" 
+      data-target="#app-modal-<%=app.id %>">
+      <%= app.applicant.name %></button>
+      <div id="app-modal-<%= app.id %>" class="modal hide fade" 
+       tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+       aria-hidden="true">
+       <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"
+        aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Applicant for <%= job.title %></h3>
+      </div>
+      <div class="modal-body">
+        <h4>Profile</h4>
+        <div id="profile_info">
+          <p><strong>Name:</strong> <%= app.applicant.name %></p>
+          <p><strong>Email:</strong> <%= app.applicant.email %></p>
+          <p>
+            <strong>Phone:</strong> 
+            <span class="text-error">Missing!</span>
+          </p>
+          <p>
+            <strong>Summary:</strong>
+            <span class="text-error">Missing!</span>
+          </p>
+          <p>
+            <strong>Experience:</strong>
+            <span class="text-error">Missing!</span>
+          </p>
+          <p>
+            <strong>Skills & Expertise:</strong>
+            <span class="text-error">Missing!</span>
+          </p>
+          <p>
+            <strong>Education:</strong>
+            <span class="text-error">Missing!</span>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+          <button class="btn btn-danger">Dismiss Applicant</button>
+          <button class="btn btn-primary">Contact Applicant</button>
+        </div>
+      </div>
+      <% end %>
+    </td>
+  </tr>
+  <!-- Modal -->
+  <div id="job-modal-<%= job.id %>" class="modal hide fade" 
+   tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+   aria-hidden="true">
+   <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel"><%= job.title %></h3>
+  </div>
+  <div class="modal-body">
+    <h4>Description</h4>
+    <p>This is a description of the position and the sort of work you would be doing. You would read this but this is Hack Day so we should have just put a Nyan Cat in here because it would be prettier.</p>
+    <h4>Responsibilities</h4>
+    <ul>
+      <li>Be on time.</li>
+      <li>Be late sometimes to keep people on their toes.</li>
+      <li>Support IE6</li>
+      <li>Fluent in Visual Basic</li>
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
+<% end %>

@@ -10,4 +10,9 @@ before_filter :authenticate_user!, :only => [:profile]
   def listings
     @jobs = Job.all
   end
+
+  def recruiter
+    @jobs = Job.all
+  end
+
 end
